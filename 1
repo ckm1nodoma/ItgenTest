@@ -15,6 +15,7 @@ def most_wanted_letter(string):
             else: dict[i]=1
     if not dict:
         print("There are no letters in", stringlow)
+        return None
     else:
         maxvalue = max(dict.values())
         for letter, value in dict.items():
