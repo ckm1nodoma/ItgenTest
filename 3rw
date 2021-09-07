@@ -18,15 +18,12 @@ def show_all(database):
     database_sorted = sort_database(database)
     for record in database_sorted.items():
         print(record)
-    return
 
 def students_for_sub(student):
     for name in database.keys():
         if name == student:
             print(database[student])
-            return database[student]
     print("There are no students with this name.")
-    return None
 
 def sub_for_students(subject):
     students_list = []
@@ -35,12 +32,10 @@ def sub_for_students(subject):
             if thing == subject:
                 students_list.append(name)
 
-    if not len(students_list) == 0:
+    if not students_list:
         print(students_list)
-        return students_list
     else:
         print('There are no matching students.')
-        return None
 
 show_all(database)
 students_for_sub("Jane")
