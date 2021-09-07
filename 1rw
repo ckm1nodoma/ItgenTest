@@ -1,0 +1,32 @@
+string1 = "......HeLlo......"
+string2 = "String ssss ttAAds TTTTTTT"
+string3 = "!@#$%^&*(*&^%$#@@#$%^&*DFGBQQQQQQQQqqqrrrrrrrr"
+string4 = "!@#$%^&*543234%^&*%$#@345677^%$#@#$%^&"
+string5 = "....пррррривет..."
+string6 = "....Tschüüüüüüüss!..."
+
+
+def most_wanted_letter(string):
+    dict = {}
+    stringlow = string.lower()
+    for i in stringlow:
+        if i.isalpha():
+            if i in dict.keys():
+                dict[i] += 1
+            else:
+                dict[i] = 1
+    if not dict:
+        return ("There are no letters in", stringlow)
+    else:
+        maxvalue = max(dict.values())
+        for letter, value in dict.items():
+            if maxvalue == value:
+                return("The most popular letter is", letter)
+
+
+print(most_wanted_letter(string1))
+print(most_wanted_letter(string2))
+print(most_wanted_letter(string3))
+print(most_wanted_letter(string4))
+print(most_wanted_letter(string5))
+print(most_wanted_letter(string6))
