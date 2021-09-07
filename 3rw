@@ -6,7 +6,7 @@ database = {
 
 def sort_database(database):
     sorted = {}
-    unsorted = {thing[0]: thing[1] for thing in database}
+    unsorted = {key: item for key, item in database.items()}
     for index in range(len(unsorted)):
         max_key = max(unsorted.keys())
         sorted[max_key] = unsorted[max_key]
@@ -48,3 +48,4 @@ students_for_sub("Jack")
 sub_for_students("math")
 sub_for_students("astronomy")
 sub_for_students("biology")
+
